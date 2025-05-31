@@ -1,0 +1,10 @@
+{
+    "name": "matheus/gerenciador_produto",
+    "description": "sistema de gerenciamento",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    },
+    "require": {}
+}
