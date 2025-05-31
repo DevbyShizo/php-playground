@@ -1,4 +1,4 @@
-vendor/
+/vendor/
 *.log
 *.cache
-*.env
+/.env
