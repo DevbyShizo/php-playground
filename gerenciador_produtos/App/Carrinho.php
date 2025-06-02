@@ -1,42 +1,56 @@
 <?php
 
+// App/Carrinho.php
 namespace App;
 
 class Carrinho
 {
     private array $produtos = [];
 
-    public function adicionarProduto(Produto $produto): void
+    public function adicionarProduto(Produto $produto): string
     {
         $this->produtos[] = $produto;
-        echo "Produto: {$produto->nome} - {$produto->preco} adicionado com sucesso!";
+        return "Produto: {$produto->getNome()} - R$ " .
+            number_format($produto->getPreco(), 2, ',', '.') . " adicionado com sucesso!";
     }
 
-    public function removerProduto(Produto $produto): void
+    public function removerProduto(string $produtoId): string
     {
-        for ($i = 0; $i < count($this->produtos); $i++) {
-            if ($produto === $this->produtos[$i]) {
-                echo "Produto: {$this->produtos[$i]->nome}, deletado!";
-                unset($this->produtos[$i]);
+        foreach ($this->produtos as $index => $produto) {
+            if ($produto->getId() === $produtoId) {
+                $nomeProduto = $produto->getNome();
+                unset($this->produtos[$index]);
                 $this->produtos = array_values($this->produtos);
+                return "Produto: {$nomeProduto} removido com sucesso!";
             }
         }
+        return "Produto não encontrado no carrinho.";
     }
 
-    public function calcularTotal()
+    public function calcularTotal(): float
     {
-        $total = 0;
-
-        foreach ($this->produtos as $produto) {
-            $total += $produto->preco;
-        }
-        echo "Total: {$total}R$";
+        return array_reduce($this->produtos, function ($total, $produto) {
+            return $total + $produto->getPreco();
+        }, 0);
     }
 
-    public function exibirProdutos()
+    public function getProdutos(): array
     {
-        foreach ($this->produtos as $produto) {
-            $produto->exibir();
-        }
+        return $this->produtos;
+    }
+
+    public function getTotalFormatado(): string
+    {
+        return "R$ " . number_format($this->calcularTotal(), 2, ',', '.');
+    }
+
+    public function isEmpty(): bool
+    {
+        return empty($this->produtos);
+    }
+
+    public function getQuantidadeItens(): int
+    {
+        return count($this->produtos);
     }
 }

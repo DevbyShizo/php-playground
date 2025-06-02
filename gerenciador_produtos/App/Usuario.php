@@ -18,7 +18,3 @@ class Usuario
         echo "Nome do usuário: {$this->nome} \n<br> Email do usuário: {$this->email} \n<br>";
     }
 }
-
-//teste
-$user = new Usuario("Adalberto", "adalberto.costa@gmail.com");
-$user->exibir();
