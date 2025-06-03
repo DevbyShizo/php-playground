@@ -9,6 +9,8 @@ Este repositório é uma coleção de mini projetos e experimentos em PHP, criad
 | Projeto             | Descrição                                                                                    | Pasta                  |
 | ------------------- | -------------------------------------------------------------------------------------------- | ---------------------- |
 | Gerenciador Produto | Sistema simples de gerenciamento de produtos e carrinho de compras, utilizando POO e arrays. | `/gerenciador_produto` |
+| Consulta CEP        | Sistema de consulta de CEP com validação, consumo da API ViaCEP e exibição dos dados.       | `/consulta_cep`        |
+
 
 ---
 
