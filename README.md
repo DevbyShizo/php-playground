@@ -6,18 +6,23 @@ Este repositório é uma coleção de mini projetos e experimentos em PHP, criad
 
 ## Projetos atuais
 
-| Projeto             | Descrição                                                                                    | Pasta                  |
-| ------------------- | -------------------------------------------------------------------------------------------- | ---------------------- |
-| Gerenciador Produto | Sistema simples de gerenciamento de produtos e carrinho de compras, utilizando POO e arrays. | `/gerenciador_produto` |
+| Projeto             | Descrição                                                                                                            | Pasta                  |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------- | ---------------------- |
+| Gerenciador Produto | Sistema simples de gerenciamento de produtos e carrinho de compras, utilizando POO e arrays.                         | `/gerenciador_produto` |
+| Consulta CEP        | Ferramenta para consulta de endereços via CEP, consumindo APIs públicas para obter dados de localização no Brasil.   | `/consulta_cep`        |
+| Explorador Países   | Aplicação para busca e filtragem de países usando a API REST Countries, com interface em Bootstrap e tradução PT-BR. | `/explorador_paises`   |
 
 ---
 
 ## Objetivos
 
 - Praticar PHP com foco em Programação Orientada a Objetos.
-- Experimentar diferentes estruturas e padrões de código.
-- Aprimorar o uso de Composer e autoload.
-- Criar pequenos sistemas funcionais para consolidar aprendizado.
+- Experimentar consumo de APIs externas e tratamento de dados JSON.
+- Aprimorar o uso de Composer, autoload e organização modular de projetos.
+- Desenvolver interfaces simples com Bootstrap para melhorar usabilidade.
+- Aplicar conceitos de internacionalização e filtros dinâmicos.
+- Consolidar aprendizado criando sistemas pequenos, funcionais e com foco em lógica e experiência do usuário.
+- Preparar-se para desafios do mundo real, desde backend até integração frontend.
 
 ---
 
